@@ -99,6 +99,11 @@ angular.module('todo', ['ionic'])
     $ionicSideMenuDelegate.toggleLeft();
   };
 
+  $scope.deleteProject = function(project) {
+    var i = $scope.projects.indexOf(project);
+    $scope.projects.splice(i, 1);
+    Projects.save($scope.projects);
+  }
 
   // Try to create the first project, make sure to defer
   // this by using $timeout so everything is initialized
