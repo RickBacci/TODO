@@ -36,6 +36,7 @@
           <ion-list>
             <ion-item ng-repeat="task in activeProject.tasks">
               {{task.title}}
+              <a href="" ng-click="deleteTask(task)">delete</a>
             </ion-item>
           </ion-list>
         </ion-content>
